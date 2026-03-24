@@ -1,20 +1,40 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+ #Book Swap 📚
 
-# Run and deploy your AI Studio app
+A premium community platform for exchanging, donating, and discovering books with a warm, bookstore-inspired aesthetic.
 
-This contains everything you need to run your app locally.
+## 🌟 Features
 
-View your app in AI Studio: https://ai.studio/apps/1a4dfd52-48e9-4656-b924-5010239c1f83
+- **Community Library**: Browse books listed by people in your community.
+- **Easy Swapping**: List your own books for exchange or donation in seconds.
+- **Smart Search**: Filter by genre, author, or condition.
+- **User Profiles**: Manage your collection and track your swaps.
+- **Secure Auth**: Built-in authentication to keep the community safe.
 
-## Run Locally
+## 🚀 Local Setup
 
-**Prerequisites:**  Node.js
+1. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
+2. **Environment Variables**:
+   Create a `.env` file and add:
+   ```env
+   JWT_SECRET=your_secret_key
+   PORT=3000
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+3. **Run the App**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Access**:
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, Vite, Tailwind CSS, Framer Motion
+- **Backend**: Node.js, Express
+- **Database**: Local JSON-based storage (db.json)
+- **Icons**: Lucide React
