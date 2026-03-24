@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All JavaScript Function Types</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        h1 {
+            color: #222;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 10px 18px;
+            margin: 8px;
+            font-size: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Function Types Demonstration</h1>
+    <p>Click each button to see how different functions work</p>
+
+    <div class="buttons">
+        <button onclick="declarationFunction()">Function Declaration</button>
+        <button onclick="expressionFunction()">Function Expression</button>
+        <button onclick="arrowFunction()">Arrow Function</button>
+        <button onclick="anonymousFunction()">Anonymous Function</button>
+        <button onclick="runIIFE()">IIFE Function</button>
+        <button onclick="callbackMain()">Callback Function</button>
+    </div>
+
+    <script>
+
+        function declarationFunction() {
+            let a = 5;
+            let b = 5;
+            alert("Function Declaration Triggered!\nResult: " + (a + b));
+        }
+
+        const expressionFunction = function () {
+            let a = 5;
+            let b = 5;
+            alert("Function Expression Triggered!\nResult: " + (a + b));
+        };
+
+        const arrowFunction = () => {
+            let a = 5;
+            let b = 5;
+            alert("Arrow Function Triggered!\nResult: " + (a + b));
+        };
+
+        function anonymousFunction() {
+            let a = 5;
+            let b = 5;
+
+            let add = function() {
+                return a + b;
+            };
+
+            alert("Anonymous Function Triggered!\nResult: " + add());
+        }
+
+        function runIIFE() {
+            (function () {
+                let a = 5;
+                let b = 5;
+                alert("IIFE Function Triggered!\nResult: " + (a + b));
+            })();
+        }
+
+        function callbackMain() {
+            let a = 5;
+            let b = 5;
+
+            function add(x, y) {
+                return x + y;
+            }
+
+            function showResult(result) {
+                alert("Callback Function Triggered!\nResult: " + result);
+            }
+
+            let total = add(a, b);
+            showResult(total);
+        }
+
+    </script>
+
+</body>
+</html>

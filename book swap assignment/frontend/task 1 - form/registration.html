@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./registration.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+
+    <form>
+        <label>First Name</label>
+        <input type="text" placeholder="Enter first name" required>
+
+        <label>Last Name</label>
+        <input type="text" placeholder="Enter last name" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter email" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" required>
+
+        <label>Re-type Password</label>
+        <input type="password" placeholder="Re-enter password" required>
+
+        <label>Contact</label>
+        <input type="tel" placeholder="Enter contact number" required>
+
+        <label>Gender</label>
+        <div class="gender">
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </div>
+
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 40px;
+        }
+
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 250px;
+        }
+
+        button {
+            padding: 8px 15px;
+        }
+
+        #captchaSection {
+            display: none;   /* Hidden initially */
+        }
+
+        #captchaText {
+            font-weight: bold;
+            background-color: #eee;
+            padding: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Simple Form</h2>
+
+<form id="form">
+   
+    <input type="text" placeholder="Enter First Name" required>
+    <input type="text" placeholder="Enter Last Name" required>
+
+    <div id="captchaSection">
+        <div id="captchaText"></div>
+        <input type="text" id="captchaInput" placeholder="Enter Captcha">
+        <input type="text" placeholder="Enter Additional Info">
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    let step = 1; 
+    let captchaValue = "";
+
+    const form = document.getElementById("form");
+    const captchaSection = document.getElementById("captchaSection");
+    const captchaText = document.getElementById("captchaText");
+    const captchaInput = document.getElementById("captchaInput");
+
+  
+    function generateCaptcha() {
+        let characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        let result = "";
+
+        for (let i = 0; i < 5; i++) {
+            result += characters[Math.floor(Math.random() * characters.length)];
+        }
+
+        return result;
+    }
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();  // Stop page reload
+
+        if (step === 1) {
+           
+            captchaValue = generateCaptcha();
+            captchaText.textContent = captchaValue;
+            captchaSection.style.display = "block";
+            step = 2;
+        } 
+        else {
+          
+            if (captchaInput.value === captchaValue) {
+                alert("Submitted successfully");
+            } else {
+                alert("Invalid captcha");
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
