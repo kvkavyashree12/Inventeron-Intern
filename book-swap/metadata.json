@@ -1,8 +1,0 @@
-{
-  "name": "Book Swap",
-  "description": "A premium platform for exchanging, donating, and discovering books within your community with a warm, bookstore-inspired aesthetic.",
-  "requestFramePermissions": [
-    "camera",
-    "geolocation"
-  ]
-}
