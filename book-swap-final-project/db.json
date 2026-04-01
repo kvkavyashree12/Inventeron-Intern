@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "id": "1774249262733",
+      "name": "kavya",
+      "email": "kvkavyashree12@gmail.com",
+      "password": "$2b$10$DKnHTKbNgvLwZS/TVgtMAeAJbiw4GFpzhg4G7UVoF52IK74qR5qBu"
+    }
+  ],
+  "books": [],
+  "wishlist": []
+}
